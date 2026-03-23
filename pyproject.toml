@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "affective-bridge"
+version = "0.1.0"
+description = "A privacy-sovereign middleware for forensic emotional inference and affective computing."
+readme = "README.md"
+authors = [
+  { name="Marina Kaličanin", email="marinadid@gmail.com" }
+]
+license = "Apache-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AetherMarina/affective-bridge"
+"Bug Tracker" = "https://github.com/AetherMarina/affective-bridge/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
