@@ -22,6 +22,13 @@ dependencies = [
     "pydantic>=2.0.0",
 ]
 
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "respx",
+]
+
 [project.urls]
 "Homepage" = "https://github.com/AetherMarina/affective-bridge"
 "Bug Tracker" = "https://github.com/AetherMarina/affective-bridge/issues"
