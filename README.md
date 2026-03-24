@@ -34,6 +34,7 @@ affective-bridge/
 │   ├── prompts.py           # The Forensic System Prompt
 │   └── schemas.py           # The Pydantic output models
 ├── tests/
+│   ├── test_dissonance.py
 │   ├── test_providers.py
 │   └── test_schemas.py
 ├── examples/
@@ -143,7 +144,15 @@ analysis = await provider.get_analysis("Any text here", "Any prompt here")
 print(analysis.silent_narrative)
 ```
 
-## ⚖️ Disclaimer
+## ⚠️ Limitations & Disclaimer
+
+`Affective-Bridge` is an experimental utility that interfaces with probabilistic Large Language Models (LLMs). Users must be aware of the following inherent limitations:
+
+1.  **Non-Deterministic Outputs:** LLMs are not deterministic. While this library enforces a strict output schema, the underlying qualitative analysis (like the "Silent Narrative") is subjective and can contain inaccuracies or hallucinations.
+2.  **Not a Clinical or Diagnostic Tool:** The dimensional mapping is an abstraction based on the Circumplex Model of Affect, intended for research, creative, and experimental applications. It is **not** a valid psychological metric. This tool must **never** be used for mental health diagnostics, employee monitoring, automated decision-making about individuals, or any form of punitive action.
+3.  **Use at Your Own Risk:** This open-source library is provided "as is," without warranty of any kind. Developers are responsible for implementing their own safety fallbacks and ethical reviews when using this data to drive application logic.
+
+## ⚖️ Authorship Disclaimer
 **Affective-Bridge** is an independent, personal project developed by Marina Kaličanin. 
 It is not an official product of, nor is it endorsed by, any past or current employers. 
 The architecture, logic, and implementation were created outside of professional work hours using personal resources.
