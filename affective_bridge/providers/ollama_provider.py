@@ -13,7 +13,8 @@ class OllamaProvider(LLMProvider):
     This class handles the specifics of sending a request to the Ollama API
     and extracting the content from the response.
     """
-    def __init__(self, model: str = "llama3", url: str = "http://localhost:11434", timeout: float = 30.0):
+    def __init__(self, model: str = "llama3", url: str = "http://localhost:11434",
+                 timeout: float = 30.0, temperature: float = 0.2):
         """
         Initializes the OllamaProvider.
 
@@ -21,10 +22,12 @@ class OllamaProvider(LLMProvider):
             model: The name of the Ollama model to use (e.g., "llama3").
             url: The base URL of the Ollama API endpoint.
             timeout: The timeout in seconds for the HTTP request.
+            temperature: The temperature parameter for the Ollama API.
         """
         self.model = model
         self.url = f"{url}/api/chat"
         self.timeout = timeout
+        self.temperature = temperature
 
     async def get_completion(self, prompt: str, system_prompt: str) -> str:
         """
@@ -48,7 +51,7 @@ class OllamaProvider(LLMProvider):
             ],
             "format": "json",
             "stream": False,
-            "options": {"temperature": 0.2}
+            "options": {"temperature": self.temperature}
         }
 
         async with httpx.AsyncClient() as client:
