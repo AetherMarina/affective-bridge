@@ -42,7 +42,7 @@ affective-bridge/
 ├── pyproject.toml           # Project configuration
 ├── README.md                # Project documentation
 └── LICENSE                  # Apache License 2.0
-└── requirements.txt         # Python dependencies
+└── requirements-dev.txt         # Python dependencies
 ```
 
 ## Quick Start 
@@ -66,7 +66,7 @@ source venv/bin/activate
 
 Install the project in editable mode + Install development dependencies:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 This command installs all dependencies from `pyproject.toml` and makes the `affective_bridge` package available in your environment.
@@ -149,7 +149,7 @@ print(analysis.silent_narrative)
 `Affective-Bridge` is an experimental utility that interfaces with probabilistic Large Language Models (LLMs). Users must be aware of the following inherent limitations:
 
 1.  **Non-Deterministic Outputs:** LLMs are not deterministic. While this library enforces a strict output schema, the underlying qualitative analysis (like the "Silent Narrative") is subjective and can contain inaccuracies or hallucinations.
-2.  **Not a Clinical or Diagnostic Tool:** The dimensional mapping is an abstraction based on the Circumplex Model of Affect, intended for research, creative, and experimental applications. It is **not** a valid psychological metric. This tool must **never** be used for mental health diagnostics, employee monitoring, automated decision-making about individuals, or any form of punitive action.
+2.  **Not a Clinical or Diagnostic Tool (No Profiling):** The dimensional mapping is an abstraction based on the Circumplex Model of Affect, intended solely for research, creative, and experimental applications. It is not a valid psychological metric. This tool must never be used for mental health diagnostics, employee monitoring, or automated decision-making. Furthermore, using this library to profile individuals or infer real-world traits, intentions, or mental states is strictly discouraged and may violate applicable data protection and AI regulations.
 3.  **Use at Your Own Risk:** This open-source library is provided "as is," without warranty of any kind. Developers are responsible for implementing their own safety fallbacks and ethical reviews when using this data to drive application logic.
 
 ## ⚖️ Authorship Disclaimer

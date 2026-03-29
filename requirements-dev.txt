@@ -2,7 +2,7 @@
 # It should be used for setting up local development and for CI.
 
 # Install the project itself in editable mode.
--e .
+-e .[test]
 
 # Pinned versions for all dependencies (direct and development).
 httpx==0.28.1
