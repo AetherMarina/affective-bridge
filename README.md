@@ -45,33 +45,23 @@ affective-bridge/
 └── requirements-dev.txt         # Python dependencies
 ```
 
+## Installation
+You can install `affective-bridge` directly from PyPI:
+```bash
+pip install affective-bridge
+```
+
 ## Quick Start 
 
-### 1. Prerequisites
+### Prerequisites
 - Python 3.10+
 - [Ollama](https://ollama.ai/) installed locally.
-- A local copy of Llama 3:
+- A local copy of a model, for example Llama 3:
   ```bash
   ollama pull llama3
   ```
 
-### 2. Environment Setup
-For development, it's recommended to set up an editable install. This allows you to run examples and tests against your local source code.
-
-Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-Install the project in editable mode + Install development dependencies:
-```bash
-pip install -r requirements-dev.txt
-```
-
-This command installs all dependencies from `pyproject.toml` and makes the `affective_bridge` package available in your environment.
-
-### 3. Basic Usage
+### Basic Usage
 
 ```python
 import asyncio
@@ -97,6 +87,22 @@ async def main():
 if __name__ == "__main__":
   asyncio.run(main())
 ```
+
+## Development Setup
+For development, it's recommended to set up an editable install. This allows you to run examples and tests against your local source code.
+
+Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+Install the project in editable mode + Install development dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
+
+This command installs all dependencies from `pyproject.toml` and makes the `affective_bridge` package available in your environment.
 
 ## Extending the Bridge: Custom Providers
 
