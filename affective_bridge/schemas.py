@@ -10,21 +10,23 @@ class ForensicAnalysis(BaseModel):
     The order follows the Forensic-First reasoning logic:
     Surface Performance -> Evidence -> Shadow Truth -> Mapping.
     """
+    # The Chain of Thought Anchor
+    psychological_evaluation: str = Field(description="The LLM's internal reasoning.")
 
-    # 1. The Surface Performance
+    # The Surface Performance
     alibi: str = Field(description="The overt, literal emotion the user is claiming to feel.")
 
-    # 2. The Performative Mapping
+    # The Performative Mapping
     alibi_valence: float = Field(ge=-1.0, le=1.0, description="Pleasure/Displeasure of the claimed alibi.")
     alibi_arousal: float = Field(ge=0.0, le=1.0, description="Activation/Energy of the claimed alibi.")
 
-    # 3. The Evidence
+    # The Evidence
     glitch: Optional[str] = Field(description="Linguistic anomalies, defensive phrasing, or 'out-of-key' words.")
 
-    # 4. The Shadow Truth
+    # The Shadow Truth
     silent_narrative: Optional[str] = Field(description="The deduced underlying psychological truth being suppressed.")
 
-    # 4. The Authentic Mapping (Coordinates should default to alibi coords if no dissonance exists)
+    # The Authentic Mapping (Coordinates should default to alibi coords if no dissonance exists)
     silent_valence: float = Field(ge=-1.0, le=1.0, description="Pleasure/Displeasure of the shadow emotion.")
     silent_arousal: float = Field(ge=0.0, le=1.0, description="Activation/Energy of the shadow emotion.")
 

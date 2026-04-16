@@ -18,8 +18,12 @@ Built for **Affective Computing**, context-aware systems, and behavioral analyti
 - **Async-First:** Built on `asyncio` and `httpx` for low-latency, concurrent processing.
 
 ## Architecture
-The bridge utilizes **schema-driven structured prompting** to bypass standard sentiment analysis. By forcing the LLM to explicitly parse intermediate variables (the "Alibi" and the "Glitch") before calculating the "Silent Narrative," it maps linguistic tension directly into deterministic metrics. This single-pass extraction prevents the need for massive vector databases or multi-agent CoT architectures, ensuring low latency for real-time emotional inference.
+The bridge utilizes Schema-Driven Reasoning (SDR) to bypass the limitations of standard sentiment analysis. Unlike traditional black-box models, Affective-Bridge employs a single-pass, reasoning-first extraction pipeline:
+- **Internal Monologue:** The engine performs a brief, binary psychological evaluation to determine the "Null Hypothesis" (congruence) before committing to a dissonance state.
+- **Dual-State Mapping:** By explicitly parsing the Alibi (overt claim) and the Glitch (linguistic tell), the library maps latent tension into deterministic metrics.
+- **Few-Shot Calibration:** Utilizing specialized emotional archetypes, the engine maintains a consistent mathematical scale for Valence and Arousal, preventing coordinate drift and ensuring stable, repeatable results.
 
+This architecture eliminates the need for complex multi-agent overhead, providing high-fidelity emotional subtext detection with minimal latency.
 ## 📂 Project Structure
 
 ```text
@@ -128,6 +132,7 @@ class DummyProvider(LLMProvider):
         # In a real provider, you would make an HTTP/API call here.
         # For this example, we return a valid, hardcoded JSON string.
         dummy_response = {
+          "psychological_evaluation": "The user claims the project is on track, but the repeated use of passive voice indicates emotional distancing. This linguistic glitch reveals underlying frustration with team performance, creating measurable dissonance.",
           "alibi": "User claims the project is on track.",
           "glitch": "Repeatedly uses passive voice ('milestones were met').",
           "silent_narrative": "Underlying frustration with team performance.",

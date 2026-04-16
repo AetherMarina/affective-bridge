@@ -21,7 +21,8 @@ async def main():
 
         # 2. Output the structured psychological data
         print("--- Analysis Results ---")
-        print(f"Alibi (Claimed Emotion):    {analysis.alibi}")
+        print(f"Internal reasoning: {analysis.psychological_evaluation}")
+        print(f"\nAlibi (Claimed Emotion):    {analysis.alibi}")
         print(f"  - Alibi Coords (V/A):     ({analysis.alibi_valence}, {analysis.alibi_arousal})")
         print(f"\nGlitch (Linguistic Tell):   {analysis.glitch}")
         print(f"\nSilent Narrative (Truth):   {analysis.silent_narrative}")
