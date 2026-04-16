@@ -9,6 +9,7 @@ def test_dissonance_calculation():
     Euclidean distance between the alibi and silent narrative coordinates.
     """
     data = {
+        "psychological_evaluation": "internal reasoning",
         "alibi": "indifference",
         "glitch": "it's fine",
         "silent_narrative": "disappointment",
@@ -34,6 +35,7 @@ def test_zero_dissonance():
     identical affective coordinates.
     """
     data = {
+        "psychological_evaluation": "internal reasoning",
         "alibi": "joy",
         "glitch": "n/a",
         "silent_narrative": "joy",
@@ -52,6 +54,7 @@ def test_max_dissonance():
     extremes of the affective space.
     """
     data = {
+        "psychological_evaluation": "internal reasoning",
         "alibi": "ecstasy",
         "glitch": "n/a",
         "silent_narrative": "depression",
@@ -77,6 +80,7 @@ def test_forensic_analysis_invalid_fields(field, value):
     """
     with pytest.raises(ValueError):
         data = {
+            "psychological_evaluation": "internal reasoning",
             "alibi": "x", "glitch": "y", "silent_narrative": "z",
             "silent_valence": 0.0, "silent_arousal": 0.0,
             "alibi_valence": 0.0, "alibi_arousal": 0.0,

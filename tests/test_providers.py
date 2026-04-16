@@ -17,6 +17,7 @@ async def test_ollama_provider_completion():
 
     # Mock the Ollama API response with the new schema
     mock_content = {
+        "psychological_evaluation": "test_psychological_evaluation",
         "alibi": "test alibi",
         "glitch": "test glitch",
         "silent_narrative": "test narrative",
