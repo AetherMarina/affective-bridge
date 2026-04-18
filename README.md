@@ -99,6 +99,12 @@ if __name__ == "__main__":
 ## Development Setup
 For development, it's recommended to set up an editable install. This allows you to run examples and tests against your local source code.
 
+First, clone the repository and navigate into the project directory:
+```bash
+git clone https://github.com/AetherMarina/affective-bridge.git
+cd affective-bridge
+```
+
 Create and activate a virtual environment:
 ```bash
 python -m venv venv
