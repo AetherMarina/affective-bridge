@@ -37,6 +37,10 @@ affective-bridge/
 │   ├── exceptions.py        # Custom exceptions
 │   ├── prompts.py           # The Forensic System Prompt
 │   └── schemas.py           # The Pydantic output models
+├── evals/
+│   ├── baseline_evaluation_matrix.csv
+│   └── example_eval_run.csv
+│   └── prompt_calibration_matrix.ipynb
 ├── tests/
 │   ├── test_dissonance.py
 │   ├── test_providers.py
@@ -154,6 +158,14 @@ analysis = await provider.get_analysis("Any text here", "Any prompt here")
 
 print(analysis.silent_narrative)
 ```
+
+## 🧪 Evaluation & Calibration
+
+Because affective extraction relies on probabilistic models, `Affective-Bridge` ships with a deterministic evaluation suite located in the `evals/` directory.
+
+This suite contains a **Golden Dataset** (`baseline_evaluation_matrix.csv`) consisting of 15 highly complex psychological edge cases (including toxic positivity, passive-aggression, and burden minimization) calibrated against Llama 3 8B. 
+
+If you modify the `SYSTEM_PROMPT` or swap the backend to a different provider (like Claude or GPT-4), you can use the included evaluation scripts to generate an `example_eval_run.csv`. The suite will output a color-coded Pandas heatmap comparing your new run against the baseline, instantly highlighting any regressions in the model's ability to detect psychological dissonance.
 
 ## ⚠️ Limitations & Disclaimer
 

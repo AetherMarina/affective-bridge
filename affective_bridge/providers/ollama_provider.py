@@ -14,7 +14,7 @@ class OllamaProvider(LLMProvider):
     and extracting the content from the response.
     """
     def __init__(self, model: str = "llama3", url: str = "http://localhost:11434",
-                 timeout: float = 30.0, temperature: float = 0.2):
+                 timeout: float = 30.0, temperature: float = 0):
         """
         Initializes the OllamaProvider.
 

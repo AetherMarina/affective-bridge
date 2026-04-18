@@ -37,3 +37,6 @@ test = [
 pythonpath = [
   "."
 ]
+
+[tool.setuptools.packages.find]
+include = ["affective_bridge*"]
