@@ -1,6 +1,6 @@
 # 🌉 Affective-Bridge
 
-[![PyPI version](https://badge.fury.io/py/affective-bridge.svg)](https://badge.fury.io/py/affective-bridge)
+[![PyPI version](https://img.shields.io/pypi/v/affective-bridge.svg?color=blue)](https://pypi.org/project/affective-bridge/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://github.com/AetherMarina/affective-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/AetherMarina/affective-bridge/actions/workflows/ci.yml)
 
@@ -50,7 +50,7 @@ affective-bridge/
 ├── pyproject.toml           # Project configuration
 ├── README.md                # Project documentation
 └── LICENSE                  # Apache License 2.0
-└── requirements-dev.txt         # Python dependencies
+└── requirements-dev.txt     # Python dependencies
 ```
 
 ## Installation
