@@ -54,12 +54,6 @@ affective-bridge/
 ```
 
 ## Installation
-You can install `affective-bridge` directly from PyPI:
-```bash
-pip install affective-bridge
-```
-
-## Quick Start 
 
 ### Prerequisites
 - Python 3.10+
@@ -68,6 +62,12 @@ pip install affective-bridge
   ```bash
   ollama pull llama3
   ```
+You can install `affective-bridge` directly from PyPI:
+```bash
+pip install affective-bridge
+```
+
+## Quick Start 
 
 ### Basic Usage
 
@@ -185,3 +185,6 @@ If you modify the `SYSTEM_PROMPT` or swap the backend to a different provider (l
 **Affective-Bridge** is an independent, personal project developed by Marina Kaličanin. 
 It is not an official product of, nor is it endorsed by, any past or current employers. 
 The architecture, logic, and implementation were created outside of professional work hours using personal resources.
+
+## License
+This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for the full text.
