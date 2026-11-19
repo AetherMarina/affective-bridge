@@ -1,3 +1,5 @@
+![Affective-Bridge banner illustrating the transformation of unstructured human text into structured psychological coordinates through a privacy-first adapter](assets/affective-bridge-banner.jpg)
+
 # 🌉 Affective-Bridge
 
 [![PyPI version](https://img.shields.io/pypi/v/affective-bridge.svg?color=blue)](https://pypi.org/project/affective-bridge/)
